@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YwU-Ve-PWs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hulk" translatesAutoresizingMaskIntoConstraints="NO" id="ru6-OW-PMc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ru6-OW-PMc" firstAttribute="centerX" secondItem="YwU-Ve-PWs" secondAttribute="centerX" id="8Eg-H9-dYY"/>
+                                    <constraint firstAttribute="bottom" secondItem="ru6-OW-PMc" secondAttribute="bottom" id="H2V-mW-Ilv"/>
+                                    <constraint firstItem="ru6-OW-PMc" firstAttribute="leading" secondItem="YwU-Ve-PWs" secondAttribute="leading" id="On8-jV-Mah"/>
+                                    <constraint firstItem="ru6-OW-PMc" firstAttribute="top" secondItem="YwU-Ve-PWs" secondAttribute="top" id="PeQ-dM-tLb"/>
+                                    <constraint firstAttribute="trailing" secondItem="ru6-OW-PMc" secondAttribute="trailing" id="ie4-Yl-Fp6"/>
+                                    <constraint firstItem="ru6-OW-PMc" firstAttribute="centerY" secondItem="YwU-Ve-PWs" secondAttribute="centerY" id="qTs-ZM-zEZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="m84-lA-uKu"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YwU-Ve-PWs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QnA-U4-A5I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YwU-Ve-PWs" secondAttribute="bottom" id="bNT-if-iR4"/>
+                            <constraint firstItem="YwU-Ve-PWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ihZ-M0-OoR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YwU-Ve-PWs" secondAttribute="trailing" id="lVL-nF-mZJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ru6-OW-PMc" id="XlV-xM-3i9"/>
+                        <outlet property="scrollView" destination="YwU-Ve-PWs" id="h8f-qM-BXH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hulk" width="750" height="1334"/>
+    </resources>
+</document>
